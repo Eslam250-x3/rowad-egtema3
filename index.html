@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رواد علم الاجتماع | درس تفاعلي مُحسَّن (مراجعة شاملة)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f0f4f8; 
+            color: #334155; 
+            scroll-behavior: smooth;
+            font-size: 1.05rem; 
+            line-height: 1.8; 
+        }
+
+        .hero-animated-gradient {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777, #f59e0b);
+            background-size: 400% 400%;
+            animation: gradientAnimation 20s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #startBtn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #startBtn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background-color: #fff; 
+            color: #6366f1; 
+        }
+        #startBtn .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+        #startBtn:hover .arrow-icon {
+            transform: translateX(-5px);
+        }
+
+        .section-divider {
+            position: relative;
+            padding-top: 50px; 
+            padding-bottom: 50px; 
+        }
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: -1px; 
+            left: 0;
+            width: 100%;
+            height: 70px; 
+            background-color: #f0f4f8; 
+            clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%); 
+            z-index: 0;
+        }
+         .hero-bottom-divider::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #f0f4f8; 
+            clip-path: polygon(0 0, 100% 70px, 100% 0); 
+            z-index: 1;
+        }
+
+        .enhanced-card {
+            background: linear-gradient(145deg, #ffffff, #f4f7fa); 
+            border-radius: 1.25rem; 
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09), 0 5px 12px rgba(0,0,0,0.05); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+            position: relative; 
+            padding: 2rem; 
+        }
+        .enhanced-card:hover {
+            transform: translateY(-8px) scale(1.02); 
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14), 0 10px 20px rgba(0,0,0,0.07);
+            border-color: rgba(99, 102, 241, 0.6); 
+        }
+      
+        .pioneer-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background-color: rgba(255,255,255,0.85);
+            border-radius: 1rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .pioneer-header .pioneer-image-container {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem auto; 
+            padding: 5px; 
+            background: linear-gradient(135deg, #8f94fb, #4e54c8); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .pioneer-header img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff; 
+        }
+
+        .tab-btn {
+            position: relative;
+            padding: 0.85rem 1.75rem; 
+            font-weight: 700; 
+            color: #4b5563; 
+            background-color: transparent;
+            border-radius: 0.6rem; 
+            transition: all 0.3s ease;
+            overflow: hidden; 
+            font-size: 1.1rem; 
+            cursor: pointer;
+        }
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #6366f1; 
+            transition: all 0.4s ease-out;
+            transform: translateX(-50%);
+        }
+        .tab-btn.active { 
+            color: #6366f1; 
+            background-color: rgba(99, 102, 241, 0.12); 
+        }
+        .tab-btn.active::after {
+            width: 75%; 
+        }
+        .tab-btn:not(.active):hover {
+            color: #6366f1;
+            background-color: rgba(99, 102, 241, 0.07);
+        }
+        .tab-btn:not(.active):hover::after {
+            width: 55%;
+        }
+        
+        .quiz-tab-btn.active-view {
+            color: #9333ea; 
+            background-color: rgba(147, 51, 234, 0.1);
+        }
+        .quiz-tab-btn.active-view::after {
+             width: 75%;
+             background-color: #9333ea;
+        }
+
+
+        .icon-accent-bg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem; 
+            height: 3rem; 
+            border-radius: 50%;
+            background-color: rgba(99, 102, 241, 0.15); 
+            color: #6366f1; 
+            margin-right: 1rem; 
+            margin-left: 0;
+        }
+        h2 .icon-accent-bg i, h3 .icon-accent-bg i { font-size: 1.4rem; } 
+        
+        .section-main-title {
+            font-size: 2.8rem; 
+            color: #4f46e5; 
+            margin-bottom: 4rem !important; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1); 
+        }
+
+        .tab-section-title {
+            font-size: 1.9rem; 
+            color: #5b21b6; 
+            margin-bottom: 1.25rem; 
+        }
+        .subsection-title { 
+             font-size: 1.5rem;
+             color: #7c3aed;
+             margin-bottom: 1rem;
+        }
+
+        .info-box {
+            padding: 1.75rem; 
+            border-radius: 1rem; 
+            border-right-width: 6px; 
+            border-left-width: 0;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem; 
+        }
+        .info-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .info-box-yellow {
+            background-color: #fffbeb; 
+            border-color: #f59e0b; 
+        }
+        .info-box-yellow h4 { color: #d97706; } 
+        .info-box-yellow .fa-check, .info-box-yellow .fa-lightbulb { color: #f59e0b; }
+
+        .info-box-blue {
+            background-color: #eff6ff; 
+            border-color: #3b82f6;
+        }
+        .info-box-blue h5 { color: #2563eb; }
+        .info-box-blue .fa-lightbulb { color: #3b82f6; }
+
+
+        .info-box-green {
+            background-color: #f0fdf4; 
+            border-color: #22c55e;
+        }
+        .info-box-green h5 { color: #16a34a; }
+        .info-box-green .fa-lightbulb { color: #22c55e; }
+
+
+        .info-box-purple {
+            background-color: #faf5ff; 
+            border-color: #a855f7;
+        }
+        .info-box-purple h5 { color: #9333ea; }
+        .info-box-purple .fa-lightbulb { color: #a855f7; }
+
+        h1, h2, h3, h4, h5, h6 { font-family: 'Scheherazade New', 'Tajawal', serif; letter-spacing: -0.25px;  } 
+        
+        .gradient-text {
+            background: linear-gradient(120deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .interactive-list li {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 0.6rem; 
+            border-radius: 0.45rem; 
+            font-size: 1.1rem; 
+        }
+        .interactive-list li:hover {
+            background-color: rgba(99, 102, 241, 0.1); 
+            transform: translateX(-6px); 
+        }
+        .interactive-list li .fa-check-circle, .interactive-list li .fa-check {
+            transition: color 0.3s ease, transform 0.3s ease;
+            margin-left: 0.85rem; 
+            margin-right: 0;
+            font-size: 1.2em; 
+        }
+        .interactive-list li:hover .fa-check-circle, .interactive-list li:hover .fa-check {
+            color: #4f46e5; 
+            transform: scale(1.15);
+        }
+
+        .pillar-box {
+            background-color: rgba(255,255,255,0.9); 
+            border: 1px solid rgba(180,180,200,0.6); 
+            padding: 1.75rem; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+        }
+        .pillar-box h5 i {
+            transition: transform 0.3s ease;
+        }
+        .pillar-box:hover h5 i {
+            transform: rotate(-15deg) scale(1.1); 
+        }
+
+        .site-footer {
+            background: linear-gradient(to left, #334155, #1e293b); 
+            color: #e2e8f0;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 20px, 100% 100%, 0% 100%); 
+        }
+        .site-footer a {
+            color: #93c5fd;
+            transition: color 0.3s ease;
+        }
+        .site-footer a:hover {
+            color: #e0f2fe;
+        }
+        .footer-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #60a5fa;
+        }
+
+        .page-content { display: none; } 
+        .page-content.active-view { display: block; animation: fadeInSmooth 0.7s ease-out; } 
+         
+        @keyframes fadeInSmooth {
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .highlight { 
+            background: linear-gradient(120deg, #fde68aCC 0%, #fca5a5CC 100%); 
+            background-repeat: no-repeat;
+            background-size: 100% 50%; 
+            background-position: 0 80%; 
+            padding: 0 3px;
+            border-radius: 3px;
+        }
+        .keyword-highlight { 
+            font-weight: 700; 
+            color: #8b5cf6; 
+        }
+        .scheherazade-font { font-family: 'Scheherazade New', serif; }
+
+        .example-block {
+            background-color: #ffffff;
+            padding: 1rem; 
+            border-radius: 0.5rem; 
+            border: 1px solid #dde2e7; 
+            margin-top: 1rem; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04); 
+        }
+        .example-block p, .example-block ul li {
+            font-size: 1rem; 
+            color: #475569; 
+        }
+        .example-block .example-title {
+            font-size: 1rem; 
+            font-weight: 600; 
+            margin-bottom: 0.5rem; 
+        }
+        .example-block .fa-lightbulb { margin-left: 0.35rem; font-size:1.1em; } 
+
+        .text-content-shape {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+        }
+        .text-content-shape p {
+            font-size: 1.1rem; 
+            line-height: 1.9;
+        }
+
+        /* Quiz Section Styles */
+        .quiz-section-container { 
+            margin-top: 2rem; 
+            padding: 2rem;
+            background-color: #e0e7ff; 
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .quiz-question-container {
+            background-color: #ffffff;
+            padding: 1.5rem; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            margin-bottom: 1.5rem; 
+        }
+        .quiz-question-container .question-text {
+            font-size: 1.2rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #374151; 
+        }
+        .quiz-question-container .options label {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+            border: 1px solid #e5e7eb; 
+            margin-bottom: 0.5rem; /* Add some space between options */
+        }
+        .quiz-question-container .options label:hover {
+            background-color: #f3f4f6; 
+        }
+        .quiz-question-container .options input[type="radio"] {
+            margin-left: 0.75rem; 
+        }
+        .quiz-question-container .options span {
+            color: #4b5563; 
+        }
+        .quiz-question-container .options label.selected-correct {
+            background-color: #d1fae5; /* bg-green-100 */
+            border-color: #6ee7b7; /* border-green-300 */
+        }
+        .quiz-question-container .options label.selected-incorrect {
+            background-color: #fee2e2; /* bg-red-100 */
+            border-color: #fca5a5; /* border-red-300 */
+        }
+
+        .correct-answer-text {
+            margin-top: 1rem; /* Increased margin-top */
+            color: #16a34a; 
+            font-weight: 700; 
+            padding: 0.75rem; /* Increased padding */
+            background-color: #f0fdf4; 
+            border-radius: 0.5rem; /* Increased border-radius */
+            border: 1px solid #bbf7d0; 
+        }
+        .quiz-section-container .section-main-title { 
+            color: #4338ca; 
+            margin-bottom: 2.5rem !important;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="hero-animated-gradient text-white py-20 md:py-28 relative hero-bottom-divider">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 scheherazade-font animate__animated animate__fadeInDown">
+                <i class="fas fa-users ml-3 text-yellow-300 opacity-90"></i> <span class="gradient-text" style="background: linear-gradient(120deg, #fef3c7, #fcd34d); -webkit-background-clip: text; background-clip: text;">رواد علم الاجتماع</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 animate__animated animate__fadeIn animate__delay-0.5s">رحلة تفاعلية عبر الزمن مع مؤسسي علم دراسة المجتمعات</p>
+            <button id="startBtn" class="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                ابدأ الرحلة <i class="fas fa-arrow-down mr-3 arrow-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 section-divider">
+        <section id="content-area" class="mb-20 animate__animated animate__fadeInUp">
+            <h2 class="section-main-title font-bold text-center flex items-center justify-center scheherazade-font">
+                <span id="main-title-icon-container" class="icon-accent-bg !bg-indigo-100 !text-indigo-600"><i id="main-title-icon" class="fas fa-star"></i></span>
+                <span id="main-title-text">الرواد المؤسسون لعلم الاجتماع</span>
+            </h2>
+            
+            <div class="flex flex-wrap justify-center mb-10 border-b border-slate-300 pb-4">
+                <button class="tab-btn active" data-content-id="pioneers-content" data-tab-type="pioneer" data-pioneer-id="ibn-khaldun">
+                    <i class="fas fa-feather-alt ml-2 opacity-80"></i> ابن خلدون
+                </button>
+                <button class="tab-btn" data-content-id="pioneers-content" data-tab-type="pioneer" data-pioneer-id="comte">
+                    <i class="fas fa-microscope ml-2 opacity-80"></i> أوجست كونت
+                </button>
+                <button class="tab-btn" data-content-id="pioneers-content" data-tab-type="pioneer" data-pioneer-id="durkheim">
+                    <i class="fas fa-project-diagram ml-2 opacity-80"></i> إميل دوركايم
+                </button>
+                <button id="quiz-tab-btn" class="tab-btn quiz-tab-btn" data-content-id="quiz-content" data-tab-type="quiz">
+                    <i class="fas fa-question-circle ml-2 opacity-80"></i> اختبر نفسك
+                </button>
+            </div>
+            
+            <div id="pioneers-content" class="page-content active-view">
+                <div class="enhanced-card">
+                    <div id="ibn-khaldun" class="pioneer-tab-content page-content active-view">
+                        <div class="w-full"> 
+                            <div class="pioneer-header">
+                                <div class="pioneer-image-container">
+                                    <img src="https://i.postimg.cc/nLH3jPG9/Screenshot-2025-05-22-at-2-35-26-PM.png" alt="[Image of ابن خلدون]" 
+                                         onerror="this.onerror=null;this.src='https://placehold.co/144x144/E0E7FF/4F46E5?text=صورة+ابن+خلدون';">
+                                </div>
+                                <h2 class="text-4xl font-bold text-indigo-800 scheherazade-font mb-1">ابن خلدون</h2>
+                                <p class="text-gray-600 text-xl mt-1">1332 - 1406 م</p>
+                                <span class="text-lg bg-indigo-200 text-indigo-800 px-4 py-2 rounded-full font-semibold mt-3 inline-block">مؤسس علم العمران</span>
+                            </div>
+                            <h3 class="tab-section-title font-bold flex items-center scheherazade-font mt-10">
+                                <span class="icon-accent-bg !bg-indigo-50 !text-indigo-600"><i class="fas fa-info-circle"></i></span>
+                                نبذة عن ابن خلدون
+                            </h3>
+                            <div class="text-content-shape">
+                                <p class="mb-3 leading-relaxed text-slate-700">
+                                    وُلد في <span class="keyword-highlight">تونس</span> عام <span class="keyword-highlight">1332م</span> (القرن الرابع عشر الميلادي/الثامن الهجري). يُعتبر <span class="keyword-highlight">المؤسس الحقيقي لعلم الاجتماع</span>، حيث استوفى هذا العلم على يديه كل الشروط الضرورية التي يجب توافرها في كل علم. وضع مقدمته الشهيرة والمعروفة باسم <span class="keyword-highlight">"مقدمة ابن خلدون"</span>، أوضح فيها أسس <span class="keyword-highlight">"علم العمران"</span> (علم الاجتماع).
+                                </p>
+                                <p class="leading-relaxed text-slate-700">
+                                    كانت أسرته قريبة من <span class="keyword-highlight">الحكم والسلطان والسياسة</span>، واهتمت بالبحث والعلم، مما غرس في نفسه حب المنصب والجاه من ناحية، وحب العلم من ناحية أخرى. خدم كثيرًا من الملوك خلال حياته، وتقلد أعلى مناصب الحكم، فتولى <span class="keyword-highlight">كتابة السر</span>، و<span class="keyword-highlight">خطة المظالم</span>، وصار <span class="keyword-highlight">وزيرًا وسفيرًا ومدرسًا وقاضيًا وخطيبًا</span>. قام بأسفار ورحلات كثيرة، واتصل بشخصيات كثيرة، وعاصر حوادث معقدة.
+                                </p>
+                            </div>
+                            
+                            <div class="info-box info-box-yellow mt-6">
+                                <h4 class="subsection-title font-bold flex items-center scheherazade-font">
+                                    <span class="icon-accent-bg !bg-yellow-100 !text-yellow-700 !w-10 !h-10 !mr-3"><i class="fas fa-question-circle !text-xl"></i></span>
+                                    أسباب قيام علم الاجتماع عند ابن خلدون
+                                </h4>
+                                <ul class="space-y-2 interactive-list text-slate-600 mb-4">
+                                    <li class="flex items-start"><i class="fas fa-check mt-1"></i><span>وجد أن <span class="font-semibold">كتب التاريخ</span>، وخاصة كتب التاريخ الإسلامي، مليئة بـ <span class="keyword-highlight">الأخطاء والمغالطات والأكاذيب</span>.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check mt-1"></i><span>رأى أن الحاجة ماسة إلى <span class="font-semibold">علم شامل</span> يقوم على <span class="keyword-highlight">الشرح والتحليل وتعليل الحوادث</span>؛ لتصحيح الوقائع التاريخية.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check mt-1"></i><span>انتهى إلى تأكيد ضرورة قيام علم جديد، وهو <span class="keyword-highlight">علم العمران البشري</span>، والذي يُسمى حديثًا باسم "علم الاجتماع".</span></li>
+                                </ul>
+                                <div class="example-block">
+                                    <p class="example-title text-yellow-700"><i class="fas fa-lightbulb"></i> أمثلة على المغالطات التاريخية التي لاحظها:</p>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>قد يذكر أحد كتب التاريخ أن معركة معينة انتصر فيها المسلمون، بينما في الحقيقة كانت هزيمة لهم.</li>
+                                        <li>قد ينسب كتاب تاريخي اختراع الصفر إلى العرب، بينما في الواقع كان الهنود هم أول من استخدم الصفر في الرياضيات.</li>
+                                        <li>في بعض الأحيان، تُصوّر كتب التاريخ شخصيات تاريخية بصورة مثالية أو شيطانية دون تقديم صورة متوازنة (مثال: قائد يوصف بأنه لم يُهزم قط، بينما الحقيقة أنه خسر بعض المعارك).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h4 class="tab-section-title font-bold mt-10 mb-5 flex items-center scheherazade-font">
+                                <span class="icon-accent-bg !bg-indigo-50 !text-indigo-600"><i class="fas fa-cubes"></i></span>
+                                دعائم علم العمران عند ابن خلدون
+                            </h4>
+                            
+                            <div class="space-y-8"> 
+                                <div class="pillar-box info-box info-box-blue">
+                                    <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-bullseye ml-2"></i> أ. موضوع علم الاجتماع</h5>
+                                    <p class="mb-3 text-slate-700 text-lg">أكد أن <span class="keyword-highlight">الاجتماع الإنساني ضروري</span>؛ لأن الفرد قاصر عن تحقيق حاجاته، وأن التفاعل لا بد أن يرتبط بالاستقرار. رأى أن <span class="keyword-highlight">المجتمع شيء طبيعي</span> يخضع لقوانين عامة ثابتة نسبيًا، ومن ثم: <span class="keyword-highlight">الظواهر الاجتماعية تُعَدُّ وقائع أو أشياء</span> يجب أن تُدرس كما تُدرس الظواهر الحيوية. فالاجتماع البشري وما يصاحبه من ظواهر يجب أن يكون موضوع علم العمران.</p>
+                                    <div class="example-block">
+                                        <p class="example-title text-blue-700"><i class="fas fa-lightbulb"></i> أمثلة تطبيقية:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><span class="font-semibold">طالب جامعي</span> يحتاج إلى السكن والطعام والتعليم، فلا يستطيع وحده بناء مسكن أو زراعة طعامه أو تعليم نفسه كل المواد، لكن في المجتمع يسكن في مساكن الطلاب، ويشتري الطعام من المتاجر، ويتعلم من الأساتذة المتخصصين.</li>
+                                            <li>مثلما يدرس <span class="font-semibold">علماء الأحياء</span> كيف تنمو النباتات في ظروف مختلفة، يدرس <span class="font-semibold">علماء الاجتماع</span> كيف تتطور المدن في ظروف اقتصادية مختلفة. ففي كلتا الحالتين تجمع البيانات، وتحلل، وتستخلص النتائج بطريقة علمية.</li>
+                                            <li><span class="font-semibold">ارتفاع معدل البطالة</span> في مجتمع ما يُعتبر ظاهرة اجتماعية قابلة للقياس والدراسة مثلما تُدرس ظاهرة انتشار مرض معين. يمكن للباحثين دراسة أسباب هذه الظاهرة وتأثيراتها، واقتراح حلول لمعالجتها.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="pillar-box info-box info-box-green">
+                                    <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-search-plus ml-2"></i> ب. منهج البحث</h5>
+                                    <ul class="list-disc list-inside space-y-2 mb-3 text-slate-700 text-lg">
+                                        <li>أكد <span class="keyword-highlight">عدم قبول الباحث أي شيء</span>، إلا بعد أن يتأكد بوضوح أنه كذلك.</li>
+                                        <li>ضرورة التزام الباحثين <span class="keyword-highlight">بمنهج المقارنة</span> بين ماضي الظاهرة وحاضرها.</li>
+                                        <li>أكد ضرورة قيام الباحثين بجمع <span class="keyword-highlight">الملاحظات الدقيقة</span> عن الظواهر الاجتماعية.</li>
+                                        <li>أكد ضرورة توصل علم العُمران إلى <span class="keyword-highlight">القوانين التي تحكم العمران البشري</span> وظواهره.</li>
+                                    </ul>
+                                    <div class="example-block">
+                                        <p class="example-title text-green-700"><i class="fas fa-lightbulb"></i> أمثلة تطبيقية للمنهج:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>التأكد من الصحة:</b> عند قراءة مقالة تدعي أن التعليم عبر الإنترنت أكثر فعالية من التعليم التقليدي، يجب على الباحث التحقق من صحة هذه الادعاءات عبر مراجعة دراسات أكاديمية موثوقة.</li>
+                                            <li><b>المقارنة:</b> لدراسة التغيرات في دور المرأة في المجتمع، يجب على الباحث مقارنة وضع المرأة في العقود الماضية بوضعها الحالي.</li>
+                                            <li><b>جمع الملاحظات:</b> عند دراسة ثقافة الاستهلاك، يجب على الباحث جمع ملاحظات دقيقة عن عادات الإنفاق لدى الناس.</li>
+                                            <li><b>التوصل للقوانين:</b> في دراسة ظاهرة التحضر السريع، يسعى الباحث لتحديد القوانين التي تؤدي إلى انتقال السكان من الريف للمدن.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="pillar-box info-box info-box-purple">
+                                    <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-flag-checkered ml-2"></i> ج. أهداف علم الاجتماع</h5>
+                                    <div class="grid md:grid-cols-2 gap-6 mb-4"> 
+                                        <div class="bg-white p-5 rounded-lg border border-purple-200 shadow-sm"> 
+                                            <h6 class="font-bold text-purple-700 mb-2 scheherazade-font text-lg"><i class="fas fa-brain ml-1"></i> أهداف نظرية:</h6>
+                                            <ul class="list-disc list-inside text-md space-y-1 text-slate-600">
+                                                <li>الكشف عن <span class="keyword-highlight">طبيعة الظواهر الاجتماعية</span> ووظائفها.</li>
+                                                <li>التوصل إلى <span class="keyword-highlight">القوانين</span> التي تخضع لها الظواهر الاجتماعية.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bg-white p-5 rounded-lg border border-purple-200 shadow-sm">
+                                            <h6 class="font-bold text-purple-700 mb-2 scheherazade-font text-lg"><i class="fas fa-hands-helping ml-1"></i> أهداف عملية فنية تطبيقية:</h6>
+                                            <ul class="list-disc list-inside text-md space-y-1 text-slate-600">
+                                                <li>الاستفادة من القوانين في <span class="keyword-highlight">تصحيح وقائع التاريخ</span>.</li>
+                                                <li><span class="keyword-highlight">تعليل حوادث التاريخ</span>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="example-block">
+                                        <p class="example-title text-purple-700"><i class="fas fa-lightbulb"></i> أمثلة تطبيقية للأهداف:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>نظري (كشف الطبيعة):</b> دراسة ظاهرة <span class="font-semibold">العائلة الممتدة</span> لفهم طبيعتها ووظائفها في الدعم الاجتماعي.</li>
+                                            <li><b>نظري (التوصل للقوانين):</b> تحديد قوانين العلاقة بين <span class="font-semibold">فرص العمل ونسبة الهجرة</span> إلى المدن.</li>
+                                            <li><b>عملي (تصحيح التاريخ):</b> إعادة تقييم <span class="font-semibold">انهيار حضارات قديمة</span> بناءً على عوامل اجتماعية واقتصادية.</li>
+                                            <li><b>عملي (تعليل الحوادث):</b> استخدام القوانين الاجتماعية لتعليل أسباب <span class="font-semibold">سقوط الإمبراطورية الرومانية</span>.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comte" class="pioneer-tab-content page-content">
+                         <div class="w-full">
+                            <div class="pioneer-header">
+                                <div class="pioneer-image-container">
+                                    <img src="https://i.postimg.cc/nLH3jPG9/Screenshot-2025-05-22-at-2-35-26-PM.png" alt="[Image of أوجست كونت]"
+                                         onerror="this.onerror=null;this.src='https://placehold.co/144x144/E0E7FF/14B8A6?text=صورة+أوجست+كونت';">
+                                </div>
+                                <h2 class="text-4xl font-bold text-teal-800 scheherazade-font mb-1">أوجست كونت</h2>
+                                <p class="text-gray-600 text-xl mt-1">1798 - 1857 م</p>
+                                <span class="text-lg bg-teal-200 text-teal-800 px-4 py-2 rounded-full font-semibold mt-3 inline-block">مؤسس الوضعية</span>
+                            </div>
+                            
+                            <h3 class="tab-section-title font-bold flex items-center scheherazade-font mt-10">
+                                <span class="icon-accent-bg !bg-teal-50 !text-teal-600"><i class="fas fa-info-circle"></i></span>
+                                نبذة عن أوجست كونت
+                            </h3>
+                            <div class="text-content-shape">
+                                <p class="leading-relaxed text-slate-700">
+                                    فيلسوف فرنسي، وُلد عام <span class="keyword-highlight">1798م</span>. يُعد <span class="keyword-highlight">رائد علم الاجتماع الحديث</span>.
+                                </p>
+                            </div>
+                             <div class="info-box info-box-yellow mt-6">
+                                <h4 class="subsection-title font-bold flex items-center scheherazade-font">
+                                    <span class="icon-accent-bg !bg-yellow-100 !text-yellow-700 !w-10 !h-10 !mr-3"><i class="fas fa-question-circle !text-xl"></i></span>
+                                    أسباب قيام علم الاجتماع عند كونت
+                                </h4>
+                                <p class="mb-2 text-slate-700 text-lg">كان يرغب في <span class="font-semibold">إصلاح المجتمع الفرنسي</span> وإنقاذه من الفوضى والانهيار. رأى أن <span class="keyword-highlight">ازدواجية التفكير</span> هي سبب الفوضى في المجتمع الفرنسي. تمثلت ازدواجية التفكير في استخدام أسلوبين متناقضين للتفكير، هما:</p>
+                                <ul class="list-disc list-inside space-y-1 mb-3 text-slate-700 text-lg">
+                                    <li><b>الأسلوب العلمي الوضعي:</b> ويُستخدم عند التفكير في الظواهر الطبيعية والكونية والبيولوجية.</li>
+                                    <li><b>الأسلوب الديني:</b> ويُستخدم عند التفكير في الظواهر الاجتماعية.</li>
+                                </ul>
+                                <p class="text-slate-700 text-lg">طالب كونت <span class="keyword-highlight">بتعميم الأسلوب العلمي الوضعي</span>، ليصبح منهجًا عامًا يشمل جميع ظواهر الكون بما فيها الظواهر الاجتماعية.</p>
+                            </div>
+                            
+                            <h4 class="tab-section-title font-bold mt-10 mb-5 flex items-center scheherazade-font">
+                                 <span class="icon-accent-bg !bg-teal-50 !text-teal-600"><i class="fas fa-cogs"></i></span>
+                                دعائم علم الاجتماع عند كونت
+                            </h4>
+                            
+                            <div class="space-y-8">
+                                <div class="pillar-box info-box info-box-blue">
+                                    <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-microscope ml-2"></i> أ. موضوع علم الاجتماع</h5>
+                                    <p class="mb-3 text-slate-700 text-lg">اعتقد أن <span class="keyword-highlight">الظواهر الاجتماعية</span> هي موضوع علم الاجتماع.</p>
+                                    <div class="example-block">
+                                        <p class="example-title text-blue-700"><i class="fas fa-lightbulb"></i> أمثلة للظواهر الاجتماعية:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>التعليم:</b> دراسة كيفية تأثير المؤسسات التعليمية على الأفراد والمجتمع.</li>
+                                            <li><b>الدين:</b> دراسة كيف يؤثر الدين كظاهرة اجتماعية على القيم والمعتقدات والسلوكيات.</li>
+                                            <li><b>الطبقات الاجتماعية:</b> دراسة كيفية تشكلها وتأثيرها على فرص الأفراد.</li>
+                                            <li><b>الحركات الاجتماعية:</b> مثل حركات حقوق الإنسان أو البيئة.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pillar-box info-box info-box-green">
+                                     <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-clipboard-list ml-2"></i> ب. منهج البحث</h5>
+                                     <p class="mb-3 text-slate-700 text-lg">وضع عددًا من القواعد المنهجية، ودعا إلى ضرورة الالتزام بها عند بحث الظواهر الاجتماعية، وهي: <span class="keyword-highlight">الملاحظة</span>، <span class="keyword-highlight">التجربة</span>، <span class="keyword-highlight">المنهج المقارن</span>، و<span class="keyword-highlight">المنهج التاريخي</span>.</p>
+                                     <div class="example-block">
+                                        <p class="example-title text-green-700"><i class="fas fa-lightbulb"></i> أمثلة تطبيقية للمنهج:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>الملاحظة:</b> باحث يزور مدارس لملاحظة تفاعل الطلاب لفهم الديناميكيات الاجتماعية.</li>
+                                            <li><b>التجربة:</b> باحث يغير ترتيب المقاعد في فصل ويقارنه بفصل آخر لتحديد تأثير التغيير على أداء الطلاب.</li>
+                                            <li><b>المنهج المقارن:</b> مقارنة نظام التعليم في بلدين مختلفين (مثل فنلندا واليابان).</li>
+                                            <li><b>المنهج التاريخي:</b> باحث يدرس السجلات التاريخية لفهم تطور دور المرأة في المجتمع.</li>
+                                        </ul>
+                                     </div>
+                                </div>
+                                <div class="pillar-box info-box info-box-purple">
+                                     <h5 class="subsection-title font-bold flex items-center scheherazade-font"><i class="fas fa-balance-scale ml-2"></i> ج. هدف علم الاجتماع عند كونت</h5>
+                                     <p class="mb-3 text-slate-700 text-lg">التوصل إلى <span class="keyword-highlight">قوانين تحكم الظواهر الاجتماعية</span>. قسم كونت هذه القوانين إلى: <span class="keyword-highlight">قوانين الثبات (الإستاتيكا الاجتماعية)</span> و<span class="keyword-highlight">قوانين الحركة والتغير (الديناميكا الاجتماعية)</span>.</p>
+                                     <div class="example-block">
+                                        <p class="example-title text-purple-700"><i class="fas fa-lightbulb"></i> أمثلة للقوانين:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>قوانين الثبات:</b> مثال: <span class="font-semibold">الأسرة كنظام اجتماعي مستقر</span>. تدرس كيف تبقى الأسرة كمؤسسة مستقرة وما العوامل التي تحافظ على تماسكها.</li>
+                                            <li><b>قوانين الحركة والتغير:</b> مثال: <span class="font-semibold">التحول من المجتمعات الزراعية إلى الصناعية</span>. تدرس العوامل التي أدت لهذا التحول وكيف أثرت على الحياة الاجتماعية.</li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="durkheim" class="pioneer-tab-content page-content">
+                        <div class="w-full">
+                            <div class="pioneer-header">
+                                 <div class="pioneer-image-container">
+                                    <img src="https://i.postimg.cc/RFYdYV5w/Screenshot-2025-05-22-at-2-36-23-PM.png" alt="[Image of إميل دوركايم]"
+                                         onerror="this.onerror=null;this.src='https://placehold.co/144x144/E0E7FF/EC4899?text=صورة+إميل+دوركايم';">
+                                </div>
+                                <h2 class="text-4xl font-bold text-pink-800 scheherazade-font mb-1">إميل دوركايم</h2>
+                                <p class="text-gray-600 text-xl mt-1">1858 - 1917 م</p>
+                                <span class="text-lg bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-semibold mt-3 inline-block">التضامن الاجتماعي</span>
+                            </div>
+                            
+                             <h3 class="tab-section-title font-bold flex items-center scheherazade-font mt-10">
+                                <span class="icon-accent-bg !bg-pink-50 !text-pink-600"><i class="fas fa-info-circle"></i></span>
+                                نبذة عن إميل دوركايم وجهوده
+                            </h3>
+                            <div class="text-content-shape">
+                                <p class="mb-3 leading-relaxed text-slate-700">
+                                    وُلد دوركايم في قرية <span class="keyword-highlight">إبينال</span> في إقليم اللورين بفرنسا. نشأ في <span class="font-semibold">مجتمع محافظ ومتضامن</span> تسوده علاقات مباشرة. انتقل إلى العاصمة <span class="keyword-highlight">باريس</span> حيث المجتمع المتنوع. تصوره للمجتمع لم يخرج عن هذين النمطين: <span class="font-semibold">مجتمع القرية البسيط</span>، و<span class="font-semibold">مجتمع المدينة المعقد</span>.
+                                </p>
+                                <p class="leading-relaxed text-slate-700">
+                                    بذل إميل دوركايم جهدًا نظريًا كبيرًا في <span class="keyword-highlight">إقامة دعائم علم الاجتماع</span>، وتحديد ميدان علم الاجتماع ومناهجه. ركز على <span class="font-semibold">تفسير الظواهر الاجتماعية بعوامل وظواهر اجتماعية مثلها</span> (متفقًا مع ما ذهب إليه ابن خلدون في هذا النهج)، واهتم بدراسة الظواهر الاجتماعية <span class="keyword-highlight">دراسةً مستقلة</span> عن غيرها من الظواهر.
+                                </p>
+                            </div>
+                            <div class="info-box mb-6 mt-6" style="background-color: #fff1f2; border-color: #f43f5e;"> <h4 class="subsection-title font-bold flex items-center scheherazade-font" style="color: #e11d48;">
+                                    <span class="icon-accent-bg !bg-rose-100 !text-rose-700 !w-10 !h-10 !mr-3"><i class="fas fa-users !text-xl"></i></span>
+                                    أنواع التضامن الاجتماعي
+                                </h4>
+                                <div class="grid md:grid-cols-2 gap-6 text-lg"> 
+                                    <div>
+                                        <h5 class="font-semibold text-pink-700 mb-1">التضامن الآلي:</h5>
+                                        <p class="text-slate-600">يسود في <span class="font-semibold">المجتمعات التقليدية البسيطة</span> (مثال: القبائل، الريف). يتسم بضيق الاختلافات والفوارق بين الأفراد. أفراده متشابهون لهم نفس المشاعر والأحاسيس، ويتمسكون بنفس القيم. أفراده لا يعرفون التخصص المهني الدقيق.</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-pink-700 mb-1">التضامن العضوي:</h5>
+                                        <p class="text-slate-600">يسود في <span class="font-semibold">المجتمعات الحديثة المعقدة</span> (مثال: الشركات، المصانع). يتسم بتنوع التخصصات المهنية. يرى أن الحياة لا تستقيم دون التكامل والتساند بين الأفراد المختلفين.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <h4 class="tab-section-title font-bold mt-10 mb-5 flex items-center scheherazade-font">
+                                 <span class="icon-accent-bg !bg-pink-50 !text-pink-600"><i class="fas fa-sitemap"></i></span>
+                                دعائم علم الاجتماع عند دوركايم
+                            </h4>
+                            <div class="space-y-8">
+                                <div class="pillar-box info-box" style="border-color: #3b82f6; background-color: #eff6ff;">
+                                    <h5 class="subsection-title font-bold flex items-center scheherazade-font" style="color: #2563eb;"><i class="fas fa-book-reader ml-2"></i> أ. موضوع علم الاجتماع</h5>
+                                    <p class="mb-3 text-slate-700 text-lg">حدد موضوع علم الاجتماع في دراسة <span class="keyword-highlight">الظواهر الاجتماعية</span>. وعرّف الظاهرة الاجتماعية بأنها "<span class="keyword-highlight">عبارة عن نظام اجتماعي يُمارس من خلال مؤسساته</span>".</p>
+                                    <div class="example-block">
+                                        <p class="example-title" style="color: #2563eb;"><i class="fas fa-lightbulb"></i> أمثلة للظواهر الاجتماعية كنظم:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>الظاهرة التربوية:</b> هي نظام اجتماعي يُمارس من خلال المدارس والمعاهد والجامعات.</li>
+                                            <li><b>النظام الديني:</b> يُمارس من خلال المؤسسات الدينية، مثل الكنائس والمساجد والمعابد.</li>
+                                            <li><b>النظام الاقتصادي:</b> يُمارس من خلال المؤسسات المالية، مثل البنوك والشركات وأسواق المال.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pillar-box info-box" style="border-color: #22c55e; background-color: #f0fdf4;">
+                                     <h5 class="subsection-title font-bold flex items-center scheherazade-font" style="color: #16a34a;"><i class="fas fa-microscope ml-2"></i> ب. منهج البحث</h5>
+                                     <p class="mb-3 text-slate-700 text-lg">أكد على ضرورة دراسة الظواهر الاجتماعية كـ <span class="keyword-highlight">"أشياء"</span> بموضوعية، و<span class="keyword-highlight">تحرر الباحث من كل فكرة مسبقة</span> عن الظاهرة. واعتمد على أساليب البحث كالملاحظة، والمقارنة، وتتبع تطور الظاهرة، وتفسيرها.</p>
+                                     <div class="example-block">
+                                        <p class="example-title" style="color: #16a34a;"><i class="fas fa-lightbulb"></i> أمثلة تطبيقية للمنهج:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>دراسة الظواهر كأشياء:</b> عند دراسة ظاهرة الجريمة، ينبغي النظر إليها كظاهرة موضوعية دون تحيزات.</li>
+                                            <li><b>التحرر من الأفكار المسبقة:</b> عند دراسة تأثير وسائل التواصل، يجب البدء دون افتراضات.</li>
+                                            <li><b>الملاحظة:</b> مراقبة تفاعل الطلاب في فصل دراسي لتحديد الأنماط السلوكية.</li>
+                                            <li><b>المقارنة:</b> مقارنة تأثيرات نظامين تعليميين مختلفين على مهارات الطلاب.</li>
+                                            <li><b>تتبع تطور الظاهرة:</b> تتبع التغيرات في الأنماط الغذائية بمجتمع ما عبر العقود.</li>
+                                            <li><b>تفسير الظاهرة:</b> تفسير أسباب ارتفاع معدل البطالة بناءً على العوامل المكتشفة.</li>
+                                        </ul>
+                                     </div>
+                                </div>
+                                <div class="pillar-box info-box" style="border-color: #a855f7; background-color: #faf5ff;">
+                                     <h5 class="subsection-title font-bold flex items-center scheherazade-font" style="color: #9333ea;"><i class="fas fa-bullseye-arrow ml-2"></i> ج. أهداف علم الاجتماع</h5>
+                                     <p class="mb-3 text-slate-700 text-lg"><span class="keyword-highlight">الكشف عن القوانين</span> التي تحكم الظواهر الاجتماعية. و<span class="keyword-highlight">حل المشكلات الاجتماعية</span> لتحقيق التضامن الاجتماعي وتقسيم العمل الوظيفي الفعال.</p>
+                                     <div class="example-block">
+                                        <p class="example-title" style="color: #9333ea;"><i class="fas fa-lightbulb"></i> أمثلة للأهداف:</p>
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li><b>الكشف عن القوانين:</b> دراسة العلاقة بين الفقر والجريمة، تأثير التعليم على فرص العمل.</li>
+                                            <li><b>حل المشكلات الاجتماعية:</b> العمل على تقليل الفجوة بين الأغنياء والفقراء، تشجيع التطوع، دمج الأقليات.</li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="quiz-content" class="page-content quiz-section-container">
+                <h2 class="section-main-title font-bold text-center flex items-center justify-center scheherazade-font">
+                    <span class="icon-accent-bg !bg-purple-100 !text-purple-600"><i class="fas fa-question-circle"></i></span>
+                    اختبر نفسك
+                </h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="quiz-question-container">
+                        <p class="question-text">١. كان لديه القدرة على إحداث التوازن الاجتماعي والأخلاقى المطلوب لاستعادة وحدة مجتمعه وتماسكه من خلال صياغة نسق من المعرفة يتميز بالإحكام المنطقى كما في العلوم التجريبية، يصف ما سبق آراء أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q1" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q1" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q1" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ابن خلدون</span></label>
+                            <label><input type="radio" name="q1" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أوجست كونت</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢. «هناك كثير من الأشياء يشوبها الكذب وعدم الدقة فعلى الباحث أن يفحصها ويرفض التصديق الأعمى لها»، نستخلص من العبارة السابقة رؤية أحد رواد علم الاجتماع وهو: (يوسف الصديق / الفيوم)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q2" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q2" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q2" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q2" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) إميل دوركايم</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣. أكد على رفضه لتلك الافتراضات اللاهوتية والميتافيزيقية التي تفسر الظواهر فالإنسان من وجهة نظره لابد أن يبحث عن الأسباب الحقيقية لوقوع الأحداث والظواهر، يشير ما سبق إلى آراء أحد رواد علم الاجتماع وهو: (دشنا / قنا)</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q3" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q3" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q3" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q3" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) إميل دوركايم</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٤. إذا تعصب الباحث لمذهب معين أو طائفة معينة من الحكام أو لدولة ما يدفعه ذلك إلى تسجيل الوقائع وفقا لهواه ونزعة ميوله الشخصية، فإن هذا يتنافى مع الحق والعدل، نستخلص مما سبق رؤية أحد رواد علم الاجتماع وهو: (قها / القليوبية)</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q4" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q4" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q4" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ابن خلدون</span></label>
+                            <label><input type="radio" name="q4" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أوجست كونت</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٥. أكد أن المجتمع في عصره شمله الفساد في مختلف نواحي الحياة، والسبب هو فساد الأخلاق التي نسبها إلى فساد التفكير واضطراب طرق الفهم الصحيح لظواهر المجتمع»، نستنتج من العبارة السابقة فكر أحد رواد علم الاجتماع وهو: (المنيا / المنيا)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q5" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أوجست كونت</span></label>
+                            <label><input type="radio" name="q5" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q5" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q5" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٦. «قام بتقديم تصنيف للعمران يتنوع ما بين الحوادث السياسية والبشرية والأخلاقية والعادات والمذاهب واللغة وغيرها كالصناعة، التعليم، الاحتكار»، نستخلص من العبارة السابقة آراء أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q6" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q6" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q6" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q6" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ابن خلدون</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٧. يراه دوركايم أنه المجتمع الذي يسوده ثقافات تقليدية ويظهر فيه مستوى تقسيم العمل، يشير ما سبق لأحد أنواع التضامن وهو: (مغاغة / المنيا)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q7" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) الآلى</span></label>
+                            <label><input type="radio" name="q7" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) البسيط</span></label>
+                            <label><input type="radio" name="q7" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) العضوى</span></label>
+                            <label><input type="radio" name="q7" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) القروى</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) الآلى</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٨. «أعلن عن استقلال دراسة الظواهر الاجتماعية بطريقة علمية وبوصفه علمًا منفصلا ذاتيا شأنه شأن الظواهر والعلوم الأخرى كالكيمياء التي تدرس ظواهرها في ضوء مناهج البحث العلمية»، تؤكد العبارة السابقة على نشأة علم الاجتماع عند أحد رواد علم الاجتماع وهو الذي:</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q8" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أكد على ضرورة قيام علم العمران البشرى</span></label>
+                            <label><input type="radio" name="q8" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أسس المنهج التاريخي</span></label>
+                            <label><input type="radio" name="q8" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) عاش بمجتمع تسوده علاقات مباشرة</span></label>
+                            <label><input type="radio" name="q8" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) طالب بتعميم المنهج الوضعي</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) طالب بتعميم المنهج الوضعي</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٩. «مثل نقطة تحول هامة في تاريخ التفكير الاجتماعى فتجنب كثير من المشكلات التي أثارها علماء الاجتماع التطوريون فظهر في كتاباته رؤيته حول نظام توزيع العمل»، تعكس العبارة السابقة أفكار أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q9" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أوجست كونت</span></label>
+                            <label><input type="radio" name="q9" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ماكس شيلر</span></label>
+                            <label><input type="radio" name="q9" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q9" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ابن خلدون</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) إميل دوركايم</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٠. «أوضح أحد الرواد أنه لابد من دراسة الظاهرة الاجتماعية بشكل متكامل بدون فصل بين مكوناتها بالاعتماد على مقارنة الظاهرة من حيث النظرة السابقة والحالية لها»، تعكس العبارة السابقة وجهة نظر أحد رواد علم الاجتماع الذي:</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q10" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) كانت دراساته مبنية على الملاحظة والمعايشة</span></label>
+                            <label><input type="radio" name="q10" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) دعا إلى إصلاح المجتمع الفرنسي وإنقاذه</span></label>
+                            <label><input type="radio" name="q10" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أسس المنهج العلمي الوضعى للمجتمع</span></label>
+                            <label><input type="radio" name="q10" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) كشف عن قوانين تقسيم العمل الوظيفي الفعال</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) كانت دراساته مبنية على الملاحظة والمعايشة</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">١١. «حذر المجتمع من التفكير المتناقض وساهم فى الإرشاد لتحسين ظروف الحياة الاجتماعية وذلك لحرصه على تخليص المجتمع من عوامل الاضطراب والفساد»، تعبر العبارة السابقة عن أفكار أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q11" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q11" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q11" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q11" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٢. «تأرجحت الآراء حول تصنيفه مفكرًا موسوعيًا أم قارئ جيد للأحداث عبر الفترات الزمنية المختلفة، أم أنه منشئ لعلم الاجتماع»، جسدت العبارة السابقة الحديث عن أحد رواد علم الاجتماع وهو: (مصر القديمة / القاهرة)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q12" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q12" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q12" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q12" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٣. «كون لنفسه فلسفة هدفها إعادة تنظيم المجتمع، وبدأ بدراسة مشكلات المجتمع بروح عقلية من خلال إطار عقلى تصوری، محددًا التباين بين العقائد الروحية والعلوم الواقعية»، تعكس العبارة السابقة رؤية أحد رواد علم الاجتماع الذي:</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q13" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) كشف عن قوانين تقسيم العمل الوظيفي الفعال</span></label>
+                            <label><input type="radio" name="q13" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) طالب بتعميم الأسلوب العلمي الوضعي للمجتمع</span></label>
+                            <label><input type="radio" name="q13" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) مهد لنشأة علم الاجتماع</span></label>
+                            <label><input type="radio" name="q13" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أكد ضرورة قيام علم العمران البشرى</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) طالب بتعميم الأسلوب العلمي الوضعي للمجتمع</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٤. ضرورة استخدام المنهج التجريبي في دراسة المجتمع وما به من ظواهر اجتماعية، يعبر ما سبق عن وجهة نظر أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q14" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q14" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q14" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q14" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) أوجست كونت</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">١٥. تم رصد القرى والمدن التي تتمسك بعادة الأخذ بالثأر إلا أن الفكرة مازالت موجودة ولا يتخلى عنها الكثيرون، نستخلص مما سبق أحد الأهداف التي سعى كونت أن يصل إليها وهي التوصل لقوانين: (دشنا / قنا)</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q15" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) التغير</span></label>
+                            <label><input type="radio" name="q15" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) الحركة</span></label>
+                            <label><input type="radio" name="q15" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) الثبات</span></label>
+                            <label><input type="radio" name="q15" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) التفاعل</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) الثبات</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٦. «ساهم في دراسة المجتمع في حالتين الأولى من ناحية الدوام والبقاء والثانية من ناحية التقلب والحراك الاجتماعي وبذلك دفع أصول قوانين المجتمع»، نستنتج من العبارة السابقة هدف علم الاجتماع عند: (طامية / الفيوم)</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q16" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q16" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q16" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q16" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أوجست كونت</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) أوجست كونت</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">١٧. «أقام مماثلة بين الظاهرة الاجتماعية والظاهرة البيولوجية على أساس وظيفى»، تشير العبارة إلى رؤية أحد رواد علم الاجتماع وهو: (الزرقا / دمياط)</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q17" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q17" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q17" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q17" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) إميل دوركايم</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٨. «كان التقاؤه بالماضى منعطفا مفاجئًا جعله يسلك بطريق المغامرات السياسية والتأمل في ذلك الماضي قريبه وبعيده مما ساعده في التمهيد لبناء علم جديد محددًا موضوعه ومتبنيًا منهجًا خاصًا لدراسته»، تفسر العبارة السابقة بداية ظهور علم الاجتماع عند: (بندر دمنهور / البحيرة)</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q18" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q18" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q18" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q18" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">١٩. «مجتمع يختلف أفراده في نواحي كثيرة مثل (الخبرة والتنشئة الاجتماعية والتدريب و ... إلخ) ويسود هذا المجتمع ما يسمى بالتماسك الوظيفي»، تتفق العبارة السابقة مع أحد أشكال المجتمعات وهو المجتمع: (توجيه / كفر الشيخ)</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q19" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) البسيط</span></label>
+                            <label><input type="radio" name="q19" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) الآلى</span></label>
+                            <label><input type="radio" name="q19" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) الحضري</span></label>
+                            <label><input type="radio" name="q19" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) البدوى</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) الحضري</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٠. «النوع الإنساني لا يستمر وجوده إلا بالتعاون»، تعكس العبارة رؤية أحد رواد علم الاجتماع وهو الذي: (كوم أمبو / أسوان)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q20" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أكد على تصحيح الوقائع التاريخية</span></label>
+                            <label><input type="radio" name="q20" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أسس المنهج الوضعي</span></label>
+                            <label><input type="radio" name="q20" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) دعا لإصلاح المجتمع الفرنسي</span></label>
+                            <label><input type="radio" name="q20" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) تصور نمطين للمجتمع</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) أكد على تصحيح الوقائع التاريخية</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">٢١. صنف قيام المجتمعات من خلال قيام أعضاء الطبقات والأفراد والبناءات بالوظائف الموكلة إليهم فذلك شرط لاستمرار المجتمع وضمان بقائه، يتفق التصنيف السابق مع ما قدمه أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q21" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q21" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q21" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q21" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) إميل دوركايم</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) إميل دوركايم</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٢. «أراد أن يتوج علم اعتبره أكثر العلوم تعقيدًا وتركيبا فهو علم يقدم على دراسة المجتمعات من الناحية الموضوعية والطبيعية بعيدًا عن الناحية اللاهوتية»، نستنتج من العبارة السابقة نشأة علم الاجتماع عند أحد رواد علم الاجتماع وهو: (مطاى / المنيا)</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q22" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q22" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q22" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q22" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) أوجست كونت</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٣. حاول علماء الاجتماع حصر الأسباب التى تؤدى إلى قيام الشعوب بالثورات منها افتقاد العدالة الاجتماعية وانتشار البطالة، يعبر ما سبق عن أحد أهداف علم الاجتماع عند كونت المتمثلة في قوانين:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q23" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) الاستقرار</span></label>
+                            <label><input type="radio" name="q23" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) النظام</span></label>
+                            <label><input type="radio" name="q23" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) الحركة</span></label>
+                            <label><input type="radio" name="q23" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) الثبات</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) الحركة</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٤. «إن الأحداث السابقة في ظاهرها لا تزيد عن الأخبار ولكن في باطنه نظر وتحقق»، تمثل المقولة رأى أحد رواد علم الاجتماع وهو: (قها / القليوبية)</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q24" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أوجست كونت</span></label>
+                            <label><input type="radio" name="q24" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q24" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q24" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) ابن خلدون</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">٢٥. «الفكر عنده هو أساس كل إصلاح أو فساد بالمجتمع، به يمكننا القضاء على التدهور الأخلاقي بالمجتمع»، نستخلص من العبارة السابقة فكر أحد رواد علم الاجتماع وهو: (روض الفرج / القاهرة)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q25" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) أوجست كونت</span></label>
+                            <label><input type="radio" name="q25" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q25" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q25" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٦. «قدم تفسيرًا مبتكرًا لنشأة المجتمع الإنساني وطبيعته حيث أكد على مدنية الإنسان بطبيعته، فلابد من الخضوع للاجتماع داخل المدينة التي ينتمى إليها»، تعكس العبارة السابقة رؤية ابن خلدون من حيث:</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q26" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) المنهج الذي اتبعه لدراسة الظواهر الاجتماعية</span></label>
+                            <label><input type="radio" name="q26" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) تحديد موضوع علم العمران البشرى</span></label>
+                            <label><input type="radio" name="q26" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) الهدف النظرى الذي أراد أن يحققه</span></label>
+                            <label><input type="radio" name="q26" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) تجنب الملاحظات الأمبريقية للحوادث الاجتماعية</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) تحديد موضوع علم العمران البشرى</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٧. ذهب المعاصرين من علماء الاجتماع إلى أن الظاهرة الاجتماعية معقدة ولا يمكن ضبطها أو التحكم فيها وأن هناك فارق كبير بين الظاهرة الطبيعية التي تتميز بالموضوعية وبين الظاهرة الاجتماعية التي تتميز باللاموضوعية، لذا يستحيل دراسة الظواهر الاجتماعية باتباع قواعد المنهج التجريبي، يتعارض الرأى السابق مع فكر أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q27" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q27" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q27" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q27" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٢٨. «تقوم فلسفة التاريخ على البحث عن النظام المتكرر للظواهر الاجتماعية ومعرفة الأخطاء والأكاذيب الماضية»، يعكس ما سبق رؤية أحد رواد علم الاجتماع الذي: (سوهاج / سوهاج)</p>
+                        <div class="options space-y-2" data-correct-answer="د">
+                            <label><input type="radio" name="q28" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ميز بين قوانين الثبات والتغير بالمجتمع</span></label>
+                            <label><input type="radio" name="q28" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أرجع انتشار الفساد إلى ازدواجية التفكير</span></label>
+                            <label><input type="radio" name="q28" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) عاش بمجتمع تسوده علاقات مباشرة</span></label>
+                            <label><input type="radio" name="q28" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) اتصل بشخصيات كثيرة وعاصر حوادث معقدة</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: د) اتصل بشخصيات كثيرة وعاصر حوادث معقدة</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">٢٩. «المجتمع ككائن عضوى تكون له هويته وخصائصه المميزة عن هوية وخصائص الأفراد المكونين له»، توضح العبارة السابقة أفكار أحد رواد علم الاجتماع وهو الذي:</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q29" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) تصور نمطين للمجتمع</span></label>
+                            <label><input type="radio" name="q29" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) اعتمد في منهجه على الوضعية</span></label>
+                            <label><input type="radio" name="q29" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أسس المنهج التاريخي</span></label>
+                            <label><input type="radio" name="q29" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) طالب بتعميم الأسلوب العلمي</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) تصور نمطين للمجتمع</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣٠. لجأ مجموعة من الباحثين إلى تطوير أفكار ونظريات ظهرت منذ زمن بعيد، ورأوا أن أحد رواد علم الاجتماع أنتج مجموعة من الأعمال التي تحوى كثيرًا مما جاء به علم الاجتماع المعاصر وكان ملتزما بالبحث الدقيق إلى جانب الرؤية النقدية التي ربط بها هذا البحث بأحداث الماضي، تؤكد الفقرة السابقة على استعانة الباحثين بأفكار أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q30" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q30" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) ابن خلدون</span></label>
+                            <label><input type="radio" name="q30" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q30" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أوجست كونت</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) ابن خلدون</p>
+                    </div>
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣١. «مزج بين التجديد الفكرى ووضوح التصور المجتمعى والمعالجة الواسعة للأفكار، وذلك عن طريق الابتعاد عن التفسير العقائدي الذي يأتى بطريق فطرى طبيعى للشخصية وأوصى بالتمسك بالوعى العلمي الواقعي المستقل عن المجتمع»، حللت العبارة السابقة آراء أحد رواد علم الاجتماع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q31" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q31" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q31" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) أوجست كونت</span></label>
+                            <label><input type="radio" name="q31" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس فيبر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣٢. تقدم الهدايا والأموال في الريف ويتكفل أهل المولود بالعقيقة والسبوع ومظاهر أخرى للاحتفال بمثل هذه المناسبات، يجسد الموقف السابق شكل من أشكال التضامن عند إميل دوركايم وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q32" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) الآلى</span></label>
+                            <label><input type="radio" name="q32" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) العضوى</span></label>
+                            <label><input type="radio" name="q32" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) الحيوى</span></label>
+                            <label><input type="radio" name="q32" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) الوظيفي</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) الآلى</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">٣٣. شهدت فرنسا حالة من التخبط والارتباك خلال القرن العشرين ما بين الدين والعلم في التفكير، يعكس ما سبق دعوة أحد علماء الاجتماع لإصلاح المجتمع وهو:</p>
+                        <div class="options space-y-2" data-correct-answer="ب">
+                            <label><input type="radio" name="q33" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q33" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q33" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) ماكس فيبر</span></label>
+                            <label><input type="radio" name="q33" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) إميل دوركايم</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ب) أوجست كونت</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣٤. نقد الدكتور "محمد عابد الجابرى" عالم الاجتماع ابن خلدون في كتابه (فكر ابن خلدون العصبية والدولة) وعلى الرغم من ذلك فإن الدكتور محمد عابد توافق مع ابن خلدون في الاعتماد على إحدى دعائم علم العمران، المتمثلة في:</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q34" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) موضوع علم العمران</span></label>
+                            <label><input type="radio" name="q34" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أهداف علم العمران النظرية</span></label>
+                            <label><input type="radio" name="q34" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) منهج البحث</span></label>
+                            <label><input type="radio" name="q34" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) أهداف علم العمران العملية</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) منهج البحث</p>
+                    </div>
+                     <div class="quiz-question-container">
+                        <p class="question-text">٣٥. وجوده الاجتماعى داخل نطاق السياسة والعلم والخبرة الذاتية في المهن المختلفة أثر بشكل بالغ في تشكيل شخصيته العلمية، يمثل ما سبق أحد رواد علم الاجتماع وهو: (كوم حمادة / البحيرة)</p>
+                        <div class="options space-y-2" data-correct-answer="أ">
+                            <label><input type="radio" name="q35" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q35" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q35" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) تالكوت بارسونز</span></label>
+                            <label><input type="radio" name="q35" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) إميل دوركايم</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: أ) ابن خلدون</p>
+                    </div>
+
+                    <div class="quiz-question-container">
+                        <p class="question-text">٣٦. «لعبت التربية في نظره دور محوري داخل المجتمع فهى القناة التي من خلالها يتم نقل مجموع المعارف والأفكار والقيم التي يتم تقاسمها بشكل جماعي بين الأفراد كما أنها أداة الربط والتواصل بين الأجيال»، تصف العبارة السابقة مجهودات أحد العلماء وهو: (الواسطى / بنى سويف)</p>
+                        <div class="options space-y-2" data-correct-answer="ج">
+                            <label><input type="radio" name="q36" value="أ" class="form-radio h-5 w-5 text-indigo-600"> <span>أ) ابن خلدون</span></label>
+                            <label><input type="radio" name="q36" value="ب" class="form-radio h-5 w-5 text-indigo-600"> <span>ب) أوجست كونت</span></label>
+                            <label><input type="radio" name="q36" value="ج" class="form-radio h-5 w-5 text-indigo-600"> <span>ج) إميل دوركايم</span></label>
+                            <label><input type="radio" name="q36" value="د" class="form-radio h-5 w-5 text-indigo-600"> <span>د) ماكس شيلر</span></label>
+                        </div>
+                        <p class="correct-answer-text hidden">الإجابة الصحيحة: ج) إميل دوركايم</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container mx-auto px-6">
+            <div class="footer-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <p class="text-lg font-semibold mb-2 scheherazade-font">درس تفاعلي حول رواد علم الاجتماع</p>
+            <p class="text-sm text-slate-400 mb-4">تم التصميم والتطوير بحب للمساهمة في نشر المعرفة.</p>
+            <p class="text-xs text-slate-500">&copy; <span id="currentYear"></span> جميع الحقوق محفوظة. <a href="#" class="hover:underline">سياسة الخصوصية</a> | <a href="#" class="hover:underline">شروط الاستخدام</a></p>
+            <button id="scrollToTopBtn" title="العودة للأعلى" class="fixed bottom-8 left-8 bg-indigo-600 hover:bg-indigo-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl transition-opacity duration-300 opacity-0 pointer-events-none">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        const allTabButtons = document.querySelectorAll('.tab-btn');
+        const allPageContents = document.querySelectorAll('.page-content');
+        const pioneerTabContents = document.querySelectorAll('.pioneer-tab-content');
+        const mainTitleText = document.getElementById('main-title-text');
+        const mainTitleIcon = document.getElementById('main-title-icon');
+        const mainTitleIconContainer = document.getElementById('main-title-icon-container');
+
+        allTabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetContentId = button.getAttribute('data-content-id');
+                const tabType = button.getAttribute('data-tab-type');
+
+                allTabButtons.forEach(btn => btn.classList.remove('active', 'active-view'));
+                allPageContents.forEach(content => content.classList.remove('active-view'));
+
+                button.classList.add('active');
+                 if (tabType === 'quiz') {
+                    button.classList.add('active-view');
+                }
+
+                const targetPageContent = document.getElementById(targetContentId);
+                if (targetPageContent) {
+                    targetPageContent.classList.add('active-view');
+                }
+
+                if (tabType === 'pioneer') {
+                    mainTitleText.textContent = 'الرواد المؤسسون لعلم الاجتماع';
+                    mainTitleIcon.className = 'fas fa-star';
+                    mainTitleIconContainer.className = 'icon-accent-bg !bg-indigo-100 !text-indigo-600';
+
+                    pioneerTabContents.forEach(pContent => pContent.classList.remove('active-view'));
+                    
+                    const pioneerId = button.getAttribute('data-pioneer-id');
+                    const targetPioneerContent = document.getElementById(pioneerId);
+                    if (targetPioneerContent) {
+                        targetPioneerContent.classList.add('active-view');
+                    }
+                    document.getElementById('pioneers-content').classList.add('active-view');
+
+                } else if (tabType === 'quiz') {
+                    mainTitleText.textContent = 'اختبر نفسك';
+                    mainTitleIcon.className = 'fas fa-question-circle';
+                    mainTitleIconContainer.className = 'icon-accent-bg !bg-purple-100 !text-purple-600';
+                    document.getElementById('pioneers-content').classList.remove('active-view');
+                }
+            });
+        });
+
+        document.getElementById('ibn-khaldun').classList.add('active-view');
+
+        const startBtn = document.getElementById('startBtn');
+        if (startBtn) {
+            startBtn.addEventListener('click', () => {
+                document.getElementById('content-area').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollToTopBtn.classList.add('opacity-100');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100');
+                scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Quiz functionality - Updated
+        const quizQuestions = document.querySelectorAll('.quiz-question-container');
+        quizQuestions.forEach(questionContainer => {
+            const radioButtons = questionContainer.querySelectorAll('input[type="radio"]');
+            const correctAnswerP = questionContainer.querySelector('.correct-answer-text');
+            const correctAnswerValue = questionContainer.querySelector('.options').getAttribute('data-correct-answer');
+
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Hide correct answer for other questions if they were shown
+                    document.querySelectorAll('.correct-answer-text').forEach(p => {
+                        if (p !== correctAnswerP) p.classList.add('hidden');
+                    });
+                     radioButtons.forEach(rb => {
+                        rb.parentElement.classList.remove('selected-correct', 'selected-incorrect');
+                    });
+
+                    // Show the correct answer for the current question
+                    correctAnswerP.classList.remove('hidden');
+
+                    // Highlight the selected option
+                    if (radio.value === correctAnswerValue) {
+                        radio.parentElement.classList.add('selected-correct');
+                    } else {
+                        radio.parentElement.classList.add('selected-incorrect');
+                        // Optionally, also highlight the actual correct answer if a wrong one is chosen
+                        questionContainer.querySelector(`input[value="${correctAnswerValue}"]`).parentElement.classList.add('selected-correct');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
